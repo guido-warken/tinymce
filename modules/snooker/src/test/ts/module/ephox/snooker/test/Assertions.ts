@@ -16,7 +16,7 @@ type OperationSingle<T> = (
   generators: Generators,
 ) => Optional<RunOperationOutput>;
 
-type OperationMultile<T> = (
+type OperationMultiple<T> = (
   wire: ResizeWire,
   table: SugarElement,
   target: T,
@@ -64,7 +64,7 @@ const checkOldMultiple = (
   expCell: { section: number; row: number; column: number },
   expectedHtml: string,
   input: string,
-  operation: OperationMultile<TargetSelection>,
+  operation: OperationMultiple<TargetSelection>,
   paths: TargetLocation[]
 ) => {
   const table = SugarElement.fromHtml<HTMLTableElement>(input);
